@@ -1,0 +1,224 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-sage: var(--sage);
+  --color-ink: var(--ink);
+  --color-pink: var(--pink);
+  --color-mint: var(--mint);
+
+  --font-display: "Nunito", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+  --font-script: "Sacramento", cursive;
+}
+
+:root {
+  --radius: 1.25rem;
+
+  /* Soft fairy-garden invitation: blush rose + sage + mist */
+  --background: #fff8fa;
+  --foreground: #5a3d55;
+
+  --card: #ffffff;
+  --card-foreground: #5a3d55;
+  --popover: #ffffff;
+  --popover-foreground: #5a3d55;
+
+  --primary: #e879a8;
+  --primary-foreground: #fffafb;
+  --secondary: #e2f5ea;
+  --secondary-foreground: #3d6b52;
+  --muted: #fce8ef;
+  --muted-foreground: #8a6b7a;
+  --accent: #ffe4a8;
+  --accent-foreground: #6a5420;
+  --destructive: #e05a5a;
+  --destructive-foreground: #fff;
+  --border: #f3d0dc;
+  --input: #fce8ef;
+  --ring: #e879a8;
+
+  --gold: #e8c45a;
+  --gold-soft: #ffe4a8;
+  --cream: #fffafb;
+  --beige: #fff0f4;
+  --sage: #8fbf9a;
+  --ink: #5a3d55;
+  --pink: #e879a8;
+  --mint: #8fbf9a;
+
+  --shadow-luxe: 0 24px 50px -20px rgb(232 121 168 / 0.28);
+  --shadow-soft: 0 14px 36px -14px rgb(232 121 168 / 0.2);
+  --gradient-gold: linear-gradient(135deg, #e8c45a, #e879a8);
+  --gradient-cream: linear-gradient(180deg, #fff5f8 0%, #f5fff8 55%, #fff8fa 100%);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--gradient-cream);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  .font-display { font-family: var(--font-display); }
+  .font-script { font-family: var(--font-script); font-weight: 400; }
+  .font-cartoon { font-family: var(--font-display); font-weight: 600; }
+
+  .text-gold { color: var(--gold); }
+  .text-pink { color: var(--pink); }
+  .text-mint { color: var(--mint); }
+  .text-sage { color: var(--sage); }
+  .bg-gold { background: var(--gold); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-cream { background: var(--cream); }
+  .shadow-luxe { box-shadow: var(--shadow-luxe); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+
+  .name-script {
+    font-family: var(--font-script);
+    color: var(--pink);
+    line-height: 1.15;
+  }
+
+  .text-shimmer { color: var(--pink); }
+
+  .gold-divider {
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #f3d0dc, #e8c45a, #f3d0dc, transparent);
+    border-radius: 99px;
+  }
+
+  .garden-mist,
+  .cartoon-sky {
+    background:
+      radial-gradient(ellipse 90% 55% at 50% 0%, #ffe4ee 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 100% 70%, #d8f5e4 0%, transparent 50%),
+      radial-gradient(ellipse 40% 35% at 0% 80%, #fff0c8 0%, transparent 45%),
+      linear-gradient(180deg, #fff5f8 0%, #f7fffa 50%, #fff8fa 100%);
+  }
+
+  .hero-atmosphere { background: inherit; }
+
+  .invite-sheet,
+  .page-card,
+  .cartoon-card {
+    background:
+      linear-gradient(165deg, #ffffff 0%, #fff9fb 60%, #f8fff9 100%);
+    border: 1px solid #f3d0dc;
+    border-radius: 1.5rem;
+    box-shadow:
+      0 1px 0 #fff inset,
+      var(--shadow-soft);
+  }
+
+  .cartoon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c47890;
+    background: #fce4ec;
+    border: 1px solid #f3d0dc;
+  }
+
+  .age-bubble {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    color: #e879a8;
+    background: #fce4ec;
+  }
+
+  .envelope-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(135deg, #e879a8, #f0a0c0);
+    border: none;
+    box-shadow: 0 10px 28px -8px rgb(232 121 168 / 0.5);
+    animation: pulse-cta 2.6s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .envelope-cta:hover { transform: translateY(-2px); }
+  .envelope-cta:active { transform: scale(0.98); }
+
+  @keyframes pulse-cta {
+    0%, 100% { box-shadow: 0 10px 28px -8px rgb(232 121 168 / 0.4); }
+    50% { box-shadow: 0 14px 36px -6px rgb(232 121 168 / 0.55), 0 0 0 6px rgb(232 121 168 / 0.1); }
+  }
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+  @keyframes drift {
+    0% { transform: translateY(-5%) rotate(0deg); opacity: 0; }
+    12% { opacity: 0.75; }
+    100% { transform: translateY(110vh) rotate(220deg); opacity: 0; }
+  }
+
+  .float-y { animation: float-y 3.2s ease-in-out infinite; }
+  .twinkle { animation: twinkle 2.2s ease-in-out infinite; }
+  .petal-fall {
+    position: absolute;
+    top: -5%;
+    border-radius: 60% 40% 55% 45%;
+    animation: drift linear infinite;
+    pointer-events: none;
+  }
+}
