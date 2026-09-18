@@ -15,7 +15,7 @@ async function getServerEntry(): Promise<ServerEntry> {
       (m) => ((m as { default?: ServerEntry }).default ?? (m as unknown as ServerEntry)),
     );
   }
-  return serverEntryPromise;
+  return serverEntryPromise; 
 }
 
 function brandedErrorResponse(): Response {
