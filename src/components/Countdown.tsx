@@ -24,15 +24,23 @@ export function Countdown({ target }: { target: Date }) {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto">
+    <div className="grid grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl mx-auto">
       {cells.map((c) => (
         <div key={c.label} className="text-center">
-          <div className="mx-auto size-[4.25rem] sm:size-24 rounded-2xl border border-[#f3d0dc] bg-white/90 flex flex-col items-center justify-center shadow-soft">
-            <div className="font-display text-2xl sm:text-3xl font-bold text-[#e879a8] tabular-nums leading-none">
+          <div
+            className="mx-auto size-[4.25rem] sm:size-[5.5rem] rounded-2xl flex flex-col items-center justify-center"
+            style={{
+              background: "linear-gradient(160deg, #fff9fc, #ffe0ee)",
+              border: "2px solid rgba(255, 176, 208, 0.7)",
+              boxShadow:
+                "0 6px 0 rgba(61, 36, 64, 0.15), 0 12px 24px -10px rgba(0,0,0,0.35)",
+            }}
+          >
+            <div className="font-display text-2xl sm:text-3xl font-bold text-[#d4528a] tabular-nums leading-none">
               {String(c.value).padStart(2, "0")}
             </div>
           </div>
-          <div className="mt-2.5 text-[9px] sm:text-[10px] tracking-[0.18em] uppercase text-[#a88898] font-bold">
+          <div className="mt-2.5 text-[9px] sm:text-[10px] tracking-[0.15em] uppercase text-[#ffc0dc] font-extrabold">
             {c.label}
           </div>
         </div>

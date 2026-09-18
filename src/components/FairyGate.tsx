@@ -85,7 +85,7 @@ export function FairyGate({ onOpened, onOpening, titleName }: FairyGateProps) {
                 <FloralCorner className="absolute bottom-3 right-3 scale-x-[-1] scale-y-[-1]" />
 
                 <div className="text-center z-10 pt-3">
-                  <p className="text-[10px] font-bold tracking-[0.28em] uppercase text-[#c47890]">
+                  <p className="text-[10px] font-bold tracking-[0.28em] uppercase text-[#d4528a]">
                     You&apos;re invited
                   </p>
                 </div>
@@ -94,14 +94,14 @@ export function FairyGate({ onOpened, onOpening, titleName }: FairyGateProps) {
                 <div className="h-[42%] w-full" aria-hidden />
 
                 <div className="text-center z-10 pb-2">
-                  <p className="font-script text-5xl sm:text-6xl text-[#e879a8] leading-[1.15] pb-1">
+                  <p className="font-script text-5xl sm:text-6xl text-[#d4528a] leading-[1.15] pb-1">
                     {titleName}
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-[#8a6b7a]">
+                  <p className="mt-1 text-sm font-semibold text-[#7a5570]">
                     Fairy Tale Garden · First Birthday
                   </p>
-                  <p className="mt-3 text-[11px] font-bold tracking-wide text-[#a88898]">
-                    Sun 20 Sep · 4 PM · Junis
+                  <p className="mt-3 text-[11px] font-bold tracking-wide text-[#9a7088]">
+                    Sun 20 Sep · 4 PM · Junis Restaurant
                   </p>
                 </div>
               </motion.div>

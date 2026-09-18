@@ -60,7 +60,7 @@ function Index() {
                   marginBottom: opening ? 0 : 24,
                 }}
                 transition={{ duration: 0.35 }}
-                className="overflow-hidden text-[10px] font-bold tracking-[0.28em] uppercase text-[#c47890]"
+                className="overflow-hidden text-[10px] font-bold tracking-[0.28em] uppercase text-[#ffd6e8]"
               >
                 Once upon a time
               </motion.p>

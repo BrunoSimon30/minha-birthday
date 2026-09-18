@@ -46,42 +46,42 @@
 :root {
   --radius: 1.25rem;
 
-  /* Soft fairy-garden invitation: blush rose + sage + mist */
-  --background: #fff8fa;
-  --foreground: #5a3d55;
+  /* Enchanted rose garden — richer, not washed-out pastel */
+  --background: #2a1830;
+  --foreground: #3d2440;
 
-  --card: #ffffff;
-  --card-foreground: #5a3d55;
-  --popover: #ffffff;
-  --popover-foreground: #5a3d55;
+  --card: #fff8fb;
+  --card-foreground: #3d2440;
+  --popover: #fff8fb;
+  --popover-foreground: #3d2440;
 
-  --primary: #e879a8;
+  --primary: #d4528a;
   --primary-foreground: #fffafb;
-  --secondary: #e2f5ea;
-  --secondary-foreground: #3d6b52;
-  --muted: #fce8ef;
-  --muted-foreground: #8a6b7a;
-  --accent: #ffe4a8;
-  --accent-foreground: #6a5420;
+  --secondary: #3d8f6a;
+  --secondary-foreground: #f0fff6;
+  --muted: #f5dce8;
+  --muted-foreground: #7a5570;
+  --accent: #e8b84a;
+  --accent-foreground: #4a3808;
   --destructive: #e05a5a;
   --destructive-foreground: #fff;
-  --border: #f3d0dc;
-  --input: #fce8ef;
-  --ring: #e879a8;
+  --border: #e8a8c4;
+  --input: #f5dce8;
+  --ring: #d4528a;
 
-  --gold: #e8c45a;
-  --gold-soft: #ffe4a8;
-  --cream: #fffafb;
-  --beige: #fff0f4;
-  --sage: #8fbf9a;
-  --ink: #5a3d55;
-  --pink: #e879a8;
-  --mint: #8fbf9a;
+  --gold: #e8b84a;
+  --gold-soft: #f5d78a;
+  --cream: #fff8fb;
+  --beige: #fce8f0;
+  --sage: #3d8f6a;
+  --ink: #3d2440;
+  --pink: #d4528a;
+  --mint: #3d8f6a;
 
-  --shadow-luxe: 0 24px 50px -20px rgb(232 121 168 / 0.28);
-  --shadow-soft: 0 14px 36px -14px rgb(232 121 168 / 0.2);
-  --gradient-gold: linear-gradient(135deg, #e8c45a, #e879a8);
-  --gradient-cream: linear-gradient(180deg, #fff5f8 0%, #f5fff8 55%, #fff8fa 100%);
+  --shadow-luxe: 0 24px 50px -14px rgb(120 40 80 / 0.45);
+  --shadow-soft: 0 14px 36px -12px rgb(120 40 80 / 0.28);
+  --gradient-gold: linear-gradient(135deg, #e8b84a, #d4528a);
+  --gradient-cream: linear-gradient(180deg, #4a2858 0%, #8b3d6b 40%, #c45a88 70%, #f0c0d4 100%);
 }
 
 @layer base {
@@ -125,10 +125,10 @@
   .garden-mist,
   .cartoon-sky {
     background:
-      radial-gradient(ellipse 90% 55% at 50% 0%, #ffe4ee 0%, transparent 55%),
-      radial-gradient(ellipse 50% 40% at 100% 70%, #d8f5e4 0%, transparent 50%),
-      radial-gradient(ellipse 40% 35% at 0% 80%, #fff0c8 0%, transparent 45%),
-      linear-gradient(180deg, #fff5f8 0%, #f7fffa 50%, #fff8fa 100%);
+      radial-gradient(ellipse 90% 50% at 50% 0%, #ff8ec4 0%, transparent 50%),
+      radial-gradient(ellipse 55% 45% at 100% 60%, #6b2d5c 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 0% 70%, #e8b84a55 0%, transparent 50%),
+      linear-gradient(180deg, #3d1f4a 0%, #7a2f62 35%, #c44880 65%, #e878a8 100%);
   }
 
   .hero-atmosphere { background: inherit; }
@@ -184,9 +184,9 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: white;
-    background: linear-gradient(135deg, #e879a8, #f0a0c0);
+    background: linear-gradient(135deg, #d4528a, #e8b84a);
     border: none;
-    box-shadow: 0 10px 28px -8px rgb(232 121 168 / 0.5);
+    box-shadow: 0 10px 28px -8px rgb(120 40 80 / 0.55);
     animation: pulse-cta 2.6s ease-in-out infinite;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -195,16 +195,25 @@
   .envelope-cta:active { transform: scale(0.98); }
 
   @keyframes pulse-cta {
-    0%, 100% { box-shadow: 0 10px 28px -8px rgb(232 121 168 / 0.4); }
-    50% { box-shadow: 0 14px 36px -6px rgb(232 121 168 / 0.55), 0 0 0 6px rgb(232 121 168 / 0.1); }
+    0%, 100% { box-shadow: 0 10px 28px -8px rgb(120 40 80 / 0.45); }
+    50% { box-shadow: 0 14px 36px -6px rgb(120 40 80 / 0.6), 0 0 0 6px rgb(212 82 138 / 0.2); }
   }
   @keyframes float-y {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
   }
   @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.15); }
+    0%, 100% { opacity: 0.25; transform: scale(0.75); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+  @keyframes star-twinkle {
+    0%, 100% { opacity: 0.35; transform: scale(0.85) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.25) rotate(12deg); }
+  }
+  @keyframes shoot {
+    0% { transform: translateX(0) translateY(0) rotate(-35deg); opacity: 0; }
+    8% { opacity: 1; }
+    100% { transform: translateX(220px) translateY(140px) rotate(-35deg); opacity: 0; }
   }
   @keyframes drift {
     0% { transform: translateY(-5%) rotate(0deg); opacity: 0; }
@@ -214,6 +223,17 @@
 
   .float-y { animation: float-y 3.2s ease-in-out infinite; }
   .twinkle { animation: twinkle 2.2s ease-in-out infinite; }
+  .star-twinkle { animation: star-twinkle 2.4s ease-in-out infinite; }
+  .shooting-star {
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #fff8e0, transparent);
+    box-shadow: 0 0 8px #f5d78a;
+    animation: shoot 4.5s linear infinite;
+    opacity: 0;
+  }
   .petal-fall {
     position: absolute;
     top: -5%;

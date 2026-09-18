@@ -13,11 +13,13 @@ export function Loader() {
         <div className="flex justify-center mb-2">
           <CartoonFairy size="md" />
         </div>
-        <p className="text-[10px] font-bold tracking-[0.28em] uppercase text-[#c47890]">
+        <p className="text-[10px] font-bold tracking-[0.28em] uppercase text-[#ffd6e8]">
           Fairy Tale Garden
         </p>
-        <p className="mt-2 font-script text-5xl text-[#e879a8] leading-[1.15]">Minha</p>
-        <p className="mt-2 text-sm text-[#8a6b7a]">Preparing a little magic…</p>
+        <p className="mt-2 font-script text-5xl text-white leading-[1.15] drop-shadow-lg">
+          Minha
+        </p>
+        <p className="mt-2 text-sm text-[#ffc0dc]">Preparing a little magic…</p>
       </div>
     </motion.div>
   );
